@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[一个建筑规范批量查询小工具]]></title>
+      <url>https://lany.me/null/tool-gfgqcx/</url>
+      <content type="html"><![CDATA[今天工作需要用到批量查询一些建筑规范是否已经过期作废，翻到几年前写的源码，把功能加强了下满足目前的工作需要，顺便增加了个简易自动更新的功能，也许过几年又想起来更新下呢。。。 下载地址(这是搬砖的人才用的玩意，不是搬砖的就不要下载了。。。)]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[优化Yelee主题的本地站内搜索功能]]></title>
+      <url>https://lany.me/null/hexo-search/</url>
+      <content type="html"><![CDATA[Yelee主题自带有搜索功能，需安装hexo-generator-search插件生成XML格式的索引文件，本地站内搜索都是基于索引文件的。 但是默认生成search.xml索引文件比较大，这里我们说下优化search.xml索引文件大小，加快搜索速度。 安装插件本地站内搜索都是基于索引文件的，Hexo中可通过hexo-generator-search插件生成XML格式的索引文件。 然后在Hexo站点根目录下的_config.yml中添加如下配置即可： 修改插件 改造index.js 默认生成的search.xml文件很大，原生插件生成的内容太多了，还会包含代码行数、html标签，包含很多冗余信息，所以有必要阉割+改造，参考网上部分文章，采用以下代码对其进行精简。 首先修改node_modules/hexo-generator-search/index.js文件，在其中添加3个函数，修改如下： 阉割模板search.ejs 然后修改模板文件search.ejs，主要目的是调用上面添加的3个函数对实际内容进行精简，这里只保留链接、标题、内容。精简成下面这个样子就好了。 精简后，生成的search.xml文件体积可缩小为原来的1/3，能有效加快搜索速度。]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo添加文章置顶功能]]></title>
+      <url>https://lany.me/null/hexo-top/</url>
+      <content type="html"><![CDATA[考虑到之前的博客有置顶文章，所以需要置顶功能。 修改node_modules/hexo-generator-index/lib/generator.js 修改generator.js完成后只需要在front-matter中设置需要置顶文章的top值，将会根据top值大小来选择置顶顺序。（大的在前面） 原文地址： http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[零基础免费搭建个人博客（hexo+coding）]]></title>
+      <url>https://lany.me/null/hexo-coding/</url>
+      <content type="html"><![CDATA[使用hexo生成静态博客并架设在免费的coding的Pages服务 准备 安装Node.js x32 x64 安装比较简单，一直next就行，如下图： 安装Git Git 验证软件正确安装 同时按下Win+R键（或者点击开始菜单-&gt;运行），打开运行窗口,输入cmd，然后输入以下命令，结果与下图相同则说明安装正确，若不正确可以卸载软件重新安装。 安装Hexo 在电脑上新建一个blog文件夹（任意位置）,该文件夹用于存放你的博客文件，然后右键单击选择Git Bash ，大家估计都有被“墙”的经历，安装hexo为了避免出现类似情况，我们使用淘宝NPM镜像下载hexo，先输入以下命令使用淘宝NPM镜像。 然后开始安装hexo 继续输入以下命令 安装完成后，在输入命令，验证是否安装正确 本地运行Hexo 初始化hexo 可能时间较长，按网速而定，耐心等待 安装生成器 运行hexo 以后要在本地运行博客只要输入该命令即可 打开浏览器，输入localhost:4000 就可以在本地看到你的个人博客了 按Ctrl+C键即可停止 申请coding 进入coding官网注册 登陆，创建新项目 开启pages服务 绑定域名 解析域名 选CNAME解析，记录值如下: 复制HTTPS 用户名替换成你自己的用户名 配置Hexo 打开之前blog文件夹中的_config.yml 这里推荐使用NotePad++进行编辑找到最后的deploy处，修改成如下，然后保存。 注意:后面有一个空格不能少，否则会出错；记得用户名换成自己的。 设置git身份信息 将下方的你的用户名、邮箱替换成自己的。 安装hexo git插件 在blog文件夹空白处右键Git Bash 发布更新博客到coding 发布时会弹出coding的登陆框，按要求输入coding的用户密码就行了。 发布成功后，访问 用户名.coding.me 或之前绑定的域名lany.me看下成果。]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[hello world]]></title>
+      <url>https://lany.me/null/hello-world/</url>
+      <content type="html"><![CDATA[折腾几个小时，终于搞定这个blog。国内搭建在coding上面，国外搭建在github上面。速度应该都不错。。。 按照惯例，大声的喊。]]></content>
+    </entry>
+    
+  
+  
+    
+  
+</search>
