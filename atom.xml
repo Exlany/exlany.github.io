@@ -157,6 +157,32 @@
   </entry>
   
   <entry>
+    <title>易语言代码测试</title>
+    <link href="https://lany.me/null/ecode-test/"/>
+    <id>https://lany.me/null/ecode-test/</id>
+    <published>2016-10-18T15:17:06.000Z</published>
+    <updated>2016-11-04T15:27:22.846Z</updated>
+    
+    <content type="html"><![CDATA[<p>易语言代码测试</p>
+<a id="more"></a>
+
+<iframe scrolling="no" height="600px" width="100%" src="//og4azy5nd.qnssl.com/ecode-test.html" frameborder="0" 'allowfullscreen'=""></iframe>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"//og4azy5nd.qnssl.com/ecode/ecode.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ecode"</span> <span class="attr">id</span>=<span class="string">"blog-ecode"</span> <span class="attr">desc</span>=<span class="string">"易语言源码"</span> <span class="attr">style</span>=<span class="string">"width: 100%; height: 100%; margin: 0px;"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">style</span>=<span class="string">"width: 100%;height: 350px;float: left"</span> <span class="attr">id</span>=<span class="string">"origi"</span>&gt;</span></div><div class="line">  此处写易语言源码。</div><div class="line"><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//og4azy5nd.qnssl.com/ecode/ecode.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> codes= Ecode.create();<span class="comment">//创建</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">putin</span>(<span class="params"></span>)</span></div><div class="line">    &#123;</div><div class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'origi'</span>).innerHTML=<span class="built_in">document</span>.getElementById(<span class="string">'origi'</span>).value;</div><div class="line">        EcodeSetCode(<span class="built_in">document</span>.getElementById(<span class="string">'blog-ecode'</span>),<span class="built_in">document</span>.getElementById(<span class="string">'origi'</span>).innerHTML);<span class="comment">//设置代码</span></div><div class="line">        codes.trans();<span class="comment">//绘制</span></div><div class="line">    &#125;</div><div class="line">    putin();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;易语言代码测试&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="test" scheme="https://lany.me/tags/test/"/>
+    
+  </entry>
+  
+  <entry>
     <title>零基础免费搭建个人博客（hexo+coding）</title>
     <link href="https://lany.me/null/hexo-coding/"/>
     <id>https://lany.me/null/hexo-coding/</id>
