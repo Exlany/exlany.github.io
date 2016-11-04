@@ -5,13 +5,30 @@
     
   <url>
     <loc>https://lany.me/null/algorithm-basics/</loc>
-    <lastmod>2016-11-03T14:29:16.422Z</lastmod>
+    <lastmod>2016-11-04T06:36:50.145Z</lastmod>
     <data>
         <display>
-        <title>算法学习</title>
+        <title>算法排序学习</title>
         <pubTime>2016-11-03T13:51:53.000Z</pubTime>
         
         <tag>算法</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lany.me/null/hello-world/</loc>
+    <lastmod>2016-11-04T01:45:03.591Z</lastmod>
+    <data>
+        <display>
+        <title>hello world</title>
+        <pubTime>2016-10-17T15:17:06.000Z</pubTime>
+        
+        <tag>随笔</tag>
          
          
            
@@ -82,23 +99,6 @@
         <pubTime>2016-10-21T23:57:16.000Z</pubTime>
         
         <tag>Hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lany.me/null/hello-world/</loc>
-    <lastmod>2016-10-22T00:03:14.272Z</lastmod>
-    <data>
-        <display>
-        <title>hello world</title>
-        <pubTime>2016-10-17T15:17:06.000Z</pubTime>
-        
-        <tag>随笔</tag>
          
          
            
