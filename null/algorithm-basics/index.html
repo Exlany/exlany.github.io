@@ -24,7 +24,7 @@
 <meta property="og:site_name" content="Lany">
 <meta property="og:description" content="从今天开始逐步开始学习算法部分的内容。">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/a05bd5c8jw1f9fafxtizmj20tj07p404.jpg">
-<meta property="og:updated_time" content="2016-11-04T06:36:50.145Z">
+<meta property="og:updated_time" content="2016-11-04T06:38:45.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法排序学习">
 <meta name="twitter:description" content="从今天开始逐步开始学习算法部分的内容。">
@@ -308,10 +308,8 @@
 <h2 id="算法基础"><a href="#算法基础" class="headerlink" title="算法基础"></a>算法基础</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><blockquote>
 <p><strong>时间复杂度</strong>：$O(n^2)$</p>
 <ul>
-<li><p>插入排序的工作方式像排序一手扑克牌，开始时，我们的左手为空并且桌子上的牌面向下。然后，我们每次从桌子上拿走一张牌并将它插入左手中正确的位置。为了找到一张牌的正确位置，我们从右到左将它与已在手中的每张牌进行比较，然后找到合适的位置将其插入。然后重复抓牌，插入。</p>
-</li>
-<li><p>理解原理之后，我们开始着手实现。先定义一个的数组int arr[128] = { 5,1,8,7,4,2,3,9,6 };可以理解为洗好的牌。</p>
-</li>
+<li>插入排序的工作方式像排序一手扑克牌，开始时，我们的左手为空并且桌子上的牌面向下。然后，我们每次从桌子上拿走一张牌并将它插入左手中正确的位置。为了找到一张牌的正确位置，我们从右到左将它与已在手中的每张牌进行比较，然后找到合适的位置将其插入。然后重复抓牌，插入。</li>
+<li>理解原理之后，我们开始着手实现。先定义一个的数组int arr[128] = { 5,1,8,7,4,2,3,9,6 };可以理解为洗好的牌。</li>
 <li>第二部开始抓第一张牌，然后再抓第二张拍，做比较，然后根据比较结果插入。这里我们采用一个while判断循环来实现<code>对比→插入</code>的过程。并且有多少张牌我们就要重复抓取几次，因此我们写一个for循环来进行抓牌。</li>
 </ul>
 </blockquote>
