@@ -9,6 +9,7 @@
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
 <meta name="author" content="Lany" />
@@ -41,7 +42,7 @@
 <meta property="og:image" content="https://lany.me//ww1.sinaimg.cn/large/a05bd5c8gw1f93dhmkqbyj20th093wew.jpg">
 <meta property="og:image" content="https://lany.me//ww4.sinaimg.cn/large/a05bd5c8gw1f93dhn2h0yj208208ljre.jpg">
 <meta property="og:image" content="https://lany.me//ww3.sinaimg.cn/large/a05bd5c8gw1f93dhlo62ng20i20doqc0.gif">
-<meta property="og:updated_time" content="2016-10-24T10:02:02.314Z">
+<meta property="og:updated_time" content="2016-11-07T07:45:39.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="零基础免费搭建个人博客（hexo+coding）">
 <meta name="twitter:description" content="使用hexo生成静态博客并架设在免费的coding的Pages服务">
@@ -435,7 +436,7 @@
 </ul>
 <p>这里推荐使用<a href="//notepad-plus-plus.org/repository/7.x/7.1/npp.7.1.Installer.exe">NotePad++</a>进行编辑找到最后的deploy处，修改成如下，然后保存。</p>
 <p>注意<code>:</code>后面有一个空格不能少，否则会出错；记得<code>用户名</code>换成自己的。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line">deploy:</div><div class="line">	<span class="built_in">type</span>: git</div><div class="line">	repo: https://git.coding.net/用户名/用户名.git</div><div class="line">	branch: coding-pages</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line">deploy:</div><div class="line">    <span class="built_in">type</span>: git</div><div class="line">    repo: https://git.coding.net/用户名/用户名.git</div><div class="line">    branch: coding-pages</div></pre></td></tr></table></figure>
 <p><img src="//ww3.sinaimg.cn/large/a05bd5c8gw1f93dhlo62ng20i20doqc0.gif" alt="_config.yml"></p>
 <ul>
 <li>设置git身份信息</li>
