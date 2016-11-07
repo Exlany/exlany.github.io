@@ -24,7 +24,7 @@
     <entry>
       <title><![CDATA[Hexo添加文章置顶功能]]></title>
       <url>https://lany.me/null/hexo-top/</url>
-      <content type="html"><![CDATA[考虑到之前的博客有置顶文章，所以需要置顶功能。 修改node_modules/hexo-generator-index/lib/generator.js 修改generator.js完成后只需要在front-matter中设置需要置顶文章的top值，将会根据top值大小来选择置顶顺序。（大的在前面） 原文地址： http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/]]></content>
+      <content type="html"><![CDATA[考虑到之前的博客有置顶文章，所以需要置顶功能。 修改node_modules/hexo-generator-index/lib/generator.js 修改generator.js完成后只需要在front-matter中设置需要置顶文章的top值，将会根据top值大小来选择置顶顺序。（大的在前面） 原文地址：http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/]]></content>
     </entry>
     
     <entry>
