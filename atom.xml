@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lany.me/"/>
-  <updated>2016-11-04T06:38:45.164Z</updated>
+  <updated>2016-11-09T09:05:04.943Z</updated>
   <id>https://lany.me/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>让多说评论头像,表情支持https</title>
+    <link href="https://lany.me/null/hello-duoshuo/"/>
+    <id>https://lany.me/null/hello-duoshuo/</id>
+    <published>2016-11-09T08:34:22.000Z</published>
+    <updated>2016-11-09T09:05:04.943Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>原理</strong> :将https图片转由七牛CDN处理</p>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>直接替换多说<a href="https://of9o770t3.qnssl.com/js/embed.min.js" target="_blank" rel="external">embed.js</a></p>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>自己动手修改embed.js</p>
+<ul>
+<li>[x] 修改头像https支持</li>
+</ul>
+<blockquote>
+<p>embed.js中搜索<code>avatarUrl: function(e, t)</code>，将下方/<em> ··· </em>/中代码插入如下位置</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">avatarUrl: <span class="function"><span class="keyword">function</span>(<span class="params">e, t</span>) </span>&#123;</div><div class="line">    <span class="comment">/*</span></div><div class="line">    if (document.location.protocol == "https:") &#123;</div><div class="line">        if (e.avatar_url) &#123;</div><div class="line">            e.avatar_url = e.avatar_url.replace(/^http\:\/\//, "https://");</div><div class="line">            e.avatar_url = e.avatar_url.replace(/himg\.bdimg\.com/, "nzriuc44h.qnssl.com");</div><div class="line">            e.avatar_url = e.avatar_url.replace(/ds\.cdncache\.org/, "nzrisok3d.qnssl.com");</div><div class="line">            e.avatar_url = e.avatar_url.replace(/img\.kaixin001\.com\.cn/, "nzrktdox3.qnssl.com");</div><div class="line">            e.avatar_url = e.avatar_url.replace(/img\d+\.douban\.com/, "img1.doubanio.com");</div><div class="line">            e.avatar_url = e.avatar_url.replace(/app\.qlogo\.cn/, "nzvcelvwu.qnssl.com");</div><div class="line">            e.avatar_url = e.avatar_url.replace(/wx\.qlogo\.cn/, "nzwsf9aei.qnssl.com");</div><div class="line">            e.avatar_url = e.avatar_url.replace(/tp\d+\.sinaimg\.cn/, "odfhb4m72.qnssl.com");</div><div class="line">            e.avatar_url = e.avatar_url.replace('img.t.sinajs.cn', "nznlz6ohs.qnssl.com");</div><div class="line">            e.avatar_url = e.avatar_url.replace('0.gravatar.com/avatar', "cdn.v2ex.com/gravatar");</div><div class="line">        &#125; else &#123;</div><div class="line">            rt.data.default_avatar_url = rt.data.default_avatar_url.replace(/^http\:\/\//, "https://");</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    */</div><div class="line">    <span class="keyword">return</span> e.avatar_url || nt.data.default_avatar_url</div></pre></td></tr></table></figure>
+<blockquote>
+<p>embed.js中搜索<code>return &#39;&lt;li class=&quot;ds-ctx-entry&quot;</code>，将下方/<em> ··· </em>/中代码插入如下位置</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ctxPost: <span class="function"><span class="keyword">function</span>(<span class="params">e, t, n</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> r = K(e);</div><div class="line">    <span class="comment">/*</span></div><div class="line">    e.message = e.message.replace(/src=(["|'])http:\/\//g, "src=$1//nznlz6ohs.qnssl.com/");</div><div class="line">    e.message = e.message.replace('img.t.sinajs.cn/', '');</div><div class="line">    */</div><div class="line">    <span class="keyword">return</span> <span class="string">'&lt;li class="ds-ctx-entry"'</span> ·····</div></pre></td></tr></table></figure>
+<ul>
+<li>[x] 修改表情https支持</li>
+</ul>
+<blockquote>
+<p>embed.js中搜索<code>http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/</code>，将下方/<em> ··· </em>/中代码插入如下位置</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">t, r</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> i = e.indexOf(<span class="string">"\u5fae\u535a"</span>) === <span class="number">0</span> ? <span class="string">"http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/"</span> + r.replace(<span class="string">"_org"</span>, <span class="string">"_thumb"</span>) : b + <span class="string">"/images/smilies/"</span> + r;</div><div class="line">    <span class="comment">/*</span></div><div class="line">        if (document.location.protocol == 'https:') &#123;</div><div class="line">            i = i.replace("http://", "//nznlz6ohs.qnssl.com/");</div><div class="line">            i = i.replace("http://img.t.sinajs.cn/", "//nznlz6ohs.qnssl.com/");</div><div class="line">        &#125;</div><div class="line">        i = i.replace("_org.gif", "_thumb.gif");</div><div class="line">    */</div><div class="line">    e === <span class="string">"WordPress"</span> &amp;&amp; (t = <span class="string">" "</span> + t + <span class="string">" "</span>),</div><div class="line">    n += <span class="string">'&lt;li&gt;&lt;img src="'</span> + i + <span class="string">'" title="'</span> + p(t) + <span class="string">'" /&gt;&lt;/li&gt;'</span></div><div class="line">&#125;),</div></pre></td></tr></table></figure>
+<blockquote>
+<p>embed.js中搜索<code>&lt;li class=&quot;ds-post&quot; data-post-id=&quot;</code>，将下方/<em> ··· </em>/中代码插入如下位置</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">case</span> <span class="string">"weibo"</span>:</div><div class="line">    o += <span class="string">'&lt;a class="ds-weibo-comments" href="javascript:void(0);"&gt;'</span> + k.comments + (e.type.match(<span class="regexp">/\-comment$/</span>) ? <span class="string">""</span>: <span class="string">'(&lt;span class="ds-count"&gt;'</span> + e.comments + <span class="string">"&lt;/span&gt;)"</span>) + <span class="string">"&lt;/a&gt;"</span> + <span class="string">'&lt;a class="ds-weibo-reposts" href="javascript:void(0);"&gt;'</span> + k.reposts + (e.type.match(<span class="regexp">/\-comment$/</span>) ? <span class="string">""</span>: <span class="string">'(&lt;span class="ds-count"&gt;'</span> + e.reposts + <span class="string">"&lt;/span&gt;)"</span>) + <span class="string">"&lt;/a&gt;"</span>;</div><div class="line">    <span class="keyword">break</span>;</div><div class="line"><span class="keyword">default</span>:</div><div class="line">&#125;</div><div class="line"><span class="comment">/*</span></div><div class="line">if (document.location.protocol == 'https:') &#123;</div><div class="line">    if (e.message.indexOf('static.duoshuo.com') == '-1') &#123;</div><div class="line">        e.message = e.message.replace(/src=(["|'])http:\/\//g, "src=$1//nznlz6ohs.qnssl.com/");</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">if (e.message.indexOf('static.duoshuo.com') != '-1') &#123;</div><div class="line">    e.message = e.message.replace(/src=(["|'])http:\/\//g, "src=$1https://");</div><div class="line">&#125;</div><div class="line">e.message = e.message.replace(/_org.gif/g, "_thumb.gif");</div><div class="line">*/</div><div class="line"><span class="keyword">return</span> <span class="string">'&lt;li class="ds-post" data-post-id="'</span> ·····</div></pre></td></tr></table></figure>
+<blockquote>
+<p>主要参考@rainwsy的<code>https://github.com/rainwsy/duoshuo-https</code>中的代码。</p>
+<p>由于我自己的embed.js增加了UA标识等代码，因此就没有直接使用@rainwsy的，自己修改了代码，hexo的可以使用我的embed.js，也可以使用@rainwsy的embed.js。</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;原理&lt;/strong&gt; :将https图片转由七牛CDN处理&lt;/p&gt;
+&lt;h3 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot; class=&quot;headerlink&quot; title=&quot;方法一&quot;&gt;&lt;/a&gt;方法一&lt;/h3&gt;&lt;p&gt;直接替换多说&lt;a href=&quot;https
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="https://lany.me/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>算法排序学习</title>
