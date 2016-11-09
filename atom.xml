@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lany.me/"/>
-  <updated>2016-11-09T09:07:40.319Z</updated>
+  <updated>2016-11-09T09:09:47.785Z</updated>
   <id>https://lany.me/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://lany.me/null/hello-duoshuo/"/>
     <id>https://lany.me/null/hello-duoshuo/</id>
     <published>2016-11-09T08:34:22.000Z</published>
-    <updated>2016-11-09T09:07:40.319Z</updated>
+    <updated>2016-11-09T09:09:47.785Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>原理</strong> :将https图片转由七牛CDN处理</p>
+    <content type="html"><![CDATA[<p><strong>原理</strong>：将https图片转由七牛镜像CDN处理</p>
 <a id="more"></a>
 <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>直接替换多说<a href="https://of9o770t3.qnssl.com/js/embed.min.js" target="_blank" rel="external">embed.js</a></p>
 <h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>自己动手修改embed.js</p>
@@ -56,7 +56,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;原理&lt;/strong&gt; :将https图片转由七牛CDN处理&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;原理&lt;/strong&gt;：将https图片转由七牛镜像CDN处理&lt;/p&gt;
     
     </summary>
     
