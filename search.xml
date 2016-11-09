@@ -4,8 +4,8 @@
   
     
     <entry>
-      <title><![CDATA[让多说评论头像,表情支持https]]></title>
-      <url>https://lany.me/null/hello-duoshuo/</url>
+      <title><![CDATA[让多说评论头像，表情支持https]]></title>
+      <url>https://lany.me/null/hexo-duoshuo/</url>
       <content type="html"><![CDATA[原理：将https图片转由七牛镜像CDN处理 方法一直接替换多说embed.js 方法二自己动手修改embed.js [x] 修改头像https支持 embed.js中搜索avatarUrl: function(e, t)，将下方/* ··· */中代码插入如下位置 embed.js中搜索return &#39;&lt;li class=&quot;ds-ctx-entry&quot;，将下方/* ··· */中代码插入如下位置 [x] 修改表情https支持 embed.js中搜索http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/，将下方/* ··· */中代码插入如下位置 embed.js中搜索&lt;li class=&quot;ds-post&quot; data-post-id=&quot;，将下方/* ··· */中代码插入如下位置 主要参考@rainwsy的https://github.com/rainwsy/duoshuo-https中的代码。 由于我自己的embed.js增加了UA标识等代码，因此就没有直接使用@rainwsy的，自己修改了代码，hexo的可以使用我的embed.js，也可以使用@rainwsy的embed.js。]]></content>
     </entry>
     

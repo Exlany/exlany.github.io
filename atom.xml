@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lany.me/"/>
-  <updated>2016-11-09T09:12:24.193Z</updated>
+  <updated>2016-11-09T11:18:59.390Z</updated>
   <id>https://lany.me/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>让多说评论头像,表情支持https</title>
-    <link href="https://lany.me/null/hello-duoshuo/"/>
-    <id>https://lany.me/null/hello-duoshuo/</id>
+    <title>让多说评论头像，表情支持https</title>
+    <link href="https://lany.me/null/hexo-duoshuo/"/>
+    <id>https://lany.me/null/hexo-duoshuo/</id>
     <published>2016-11-09T08:34:22.000Z</published>
-    <updated>2016-11-09T09:12:24.193Z</updated>
+    <updated>2016-11-09T11:18:59.390Z</updated>
     
     <content type="html"><![CDATA[<p><strong>原理</strong>：将https图片转由七牛镜像CDN处理</p>
 <a id="more"></a>
