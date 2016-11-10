@@ -207,7 +207,7 @@
     <link href="https://lany.me/null/hexo-coding/"/>
     <id>https://lany.me/null/hexo-coding/</id>
     <published>2016-10-18T11:40:06.000Z</published>
-    <updated>2016-11-07T07:45:39.223Z</updated>
+    <updated>2016-11-10T00:05:16.466Z</updated>
     
     <content type="html"><![CDATA[<p>使用hexo生成静态博客并架设在免费的coding的Pages服务</p>
 <a id="more"></a>
@@ -231,13 +231,13 @@
 </ul>
 </li>
 </ul>
-<p><img src="//ww2.sinaimg.cn/large/a05bd5c8gw1f93dhpgp5qg20e30azn4x.gif" alt="Git"></p>
+<p><img src="//ww1.sinaimg.cn/large/a05bd5c8gw1f93dhpgp5qg20e30azn4x.gif" alt="Git"></p>
 <ul>
 <li>验证软件正确安装</li>
 </ul>
 <p>同时按下<code>Win+R</code>键（或者点击<code>开始菜单</code>-&gt;<code>运行</code>），打开运行窗口,输入<code>cmd</code>，然后输入以下命令，结果与下图相同则说明安装正确，若不正确可以卸载软件重新安装。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git --version</div><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure>
-<p><img src="//ww2.sinaimg.cn/large/a05bd5c8gw1f93dhm1itpj20iw0cct93.jpg" alt="cmd验证"></p>
+<p><img src="//ww1.sinaimg.cn/large/a05bd5c8gw1f93dhm1itpj20iw0cct93.jpg" alt="cmd验证"></p>
 <blockquote>
 <p>安装Hexo</p>
 </blockquote>
@@ -260,7 +260,7 @@
 <li>安装完成后，在输入命令，验证是否安装正确</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo -v</div></pre></td></tr></table></figure>
-<p><img src="//ww2.sinaimg.cn/large/a05bd5c8gw1f93dhu2uwcj20hj0d5mxx.jpg" alt="hexo-v"></p>
+<p><img src="//ww1.sinaimg.cn/large/a05bd5c8gw1f93dhu2uwcj20hj0d5mxx.jpg" alt="hexo-v"></p>
 <blockquote>
 <p>本地运行Hexo</p>
 </blockquote>
@@ -269,7 +269,7 @@
 </ul>
 <p>可能时间较长，按网速而定，耐心等待</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
-<p><img src="//ww2.sinaimg.cn/large/a05bd5c8gw1f93dhunaijg20gj0920y7.gif" alt="hexo-s-g"></p>
+<p><img src="//ww1.sinaimg.cn/large/a05bd5c8gw1f93dhunaijg20gj0920y7.gif" alt="hexo-s-g"></p>
 <ul>
 <li>安装生成器</li>
 </ul>
