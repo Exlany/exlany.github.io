@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lany.me/"/>
-  <updated>2016-11-09T13:04:59.434Z</updated>
+  <updated>2016-11-10T02:44:18.840Z</updated>
   <id>https://lany.me/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="https://lany.me/null/hexo-duoshuo/"/>
     <id>https://lany.me/null/hexo-duoshuo/</id>
     <published>2016-11-09T08:34:22.000Z</published>
-    <updated>2016-11-09T13:04:59.434Z</updated>
+    <updated>2016-11-10T02:44:18.840Z</updated>
     
     <content type="html"><![CDATA[<p><strong>原理</strong>：将https图片转由七牛镜像CDN处理</p>
 <a id="more"></a>
-<h3 id="方法一-直接调用"><a href="#方法一-直接调用" class="headerlink" title="方法一(直接调用)"></a>方法一(直接调用)</h3><p>直接替换多说<a href="https://of9o770t3.qnssl.com/js/embed.min.js" target="_blank" rel="external">embed.js</a></p>
+<h3 id="方法一-直接调用"><a href="#方法一-直接调用" class="headerlink" title="方法一(直接调用)"></a>方法一(直接调用)</h3><p>直接替换多说<a href="https://dn-bim.qbox.me/js/duoshuo.js" target="_blank" rel="external">embed.js</a></p>
 <h3 id="方法二-自己修改"><a href="#方法二-自己修改" class="headerlink" title="方法二(自己修改)"></a>方法二(自己修改)</h3><h4 id="1-修改头像https支持"><a href="#1-修改头像https支持" class="headerlink" title="1.修改头像https支持"></a>1.修改头像https支持</h4><blockquote>
 <p>embed.js中搜索<code>avatarUrl: function(e, t)</code>，将下方<code>/* ··· */</code>中代码插入如下位置</p>
 </blockquote>
