@@ -108,7 +108,7 @@
     <link href="https://lany.me/null/tool-gfgqcx/"/>
     <id>https://lany.me/null/tool-gfgqcx/</id>
     <published>2016-10-25T14:07:09.000Z</published>
-    <updated>2016-10-25T15:22:31.481Z</updated>
+    <updated>2016-11-11T09:09:53.706Z</updated>
     
     <content type="html"><![CDATA[<p>今天工作需要用到批量查询一些建筑规范是否已经过期作废，翻到几年前写的源码，把功能加强了下满足目前的工作需要，顺便增加了个简易自动更新的功能，也许过几年又想起来更新下呢。。。</p>
 <ul>
