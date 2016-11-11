@@ -207,7 +207,7 @@
     <link href="https://lany.me/null/hexo-coding/"/>
     <id>https://lany.me/null/hexo-coding/</id>
     <published>2016-10-18T11:40:06.000Z</published>
-    <updated>2016-11-10T00:05:16.466Z</updated>
+    <updated>2016-11-11T00:45:01.779Z</updated>
     
     <content type="html"><![CDATA[<p>使用hexo生成静态博客并架设在免费的coding的Pages服务</p>
 <a id="more"></a>
@@ -223,7 +223,7 @@
 </li>
 </ul>
 <p>安装比较简单，一直next就行，如下图：</p>
-<p><img src="//ww4.sinaimg.cn/large/a05bd5c8gw1f93dhyuwqtg20e30azk1q.gif" alt="Node.js"></p>
+<p><img src="//ww1.sinaimg.cn/large/a05bd5c8gw1f93dhyuwqtg20e30azk1q.gif" alt="Node.js"></p>
 <ul>
 <li><p>安装Git</p>
 <ul>
@@ -250,7 +250,7 @@
 <li>然后开始安装hexo</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install -g hexo-cli</div></pre></td></tr></table></figure>
-<p><img src="//ww4.sinaimg.cn/large/a05bd5c8gw1f93dhwmrt2g20im0eadl0.gif" alt="安装Hexo"></p>
+<p><img src="//ww1.sinaimg.cn/large/a05bd5c8gw1f93dhwmrt2g20im0eadl0.gif" alt="安装Hexo"></p>
 <ul>
 <li>继续输入以下命令</li>
 </ul>
@@ -291,7 +291,7 @@
 <ul>
 <li>进入coding官网<a href="//coding.net/register" title="用户注册">注册</a></li>
 </ul>
-<p><img src="//ww4.sinaimg.cn/mw690/a05bd5c8gw1f93dhos4ygj20i00egdgl.jpg" alt=""></p>
+<p><img src="//ww1.sinaimg.cn/mw690/a05bd5c8gw1f93dhos4ygj20i00egdgl.jpg" alt=""></p>
 <ul>
 <li>登陆，创建新项目</li>
 </ul>
@@ -315,15 +315,14 @@
 </ul>
 <p><code>用户名</code>替换成你自己的用户名</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://git.coding.net/用户名/用户名.git</div></pre></td></tr></table></figure>
-<p><img src="//ww4.sinaimg.cn/large/a05bd5c8gw1f93dhn2h0yj208208ljre.jpg" alt="cpy"></p>
+<p><img src="//ww1.sinaimg.cn/large/a05bd5c8gw1f93dhn2h0yj208208ljre.jpg" alt="cpy"></p>
 <blockquote>
 <p>配置Hexo</p>
 </blockquote>
 <ul>
 <li>打开之前blog文件夹中的<code>_config.yml</code></li>
 </ul>
-<p>这里推荐使用<a href="//notepad-plus-plus.org/repository/7.x/7.1/npp.7.1.Installer.exe">NotePad++</a>进行编辑找到最后的deploy处，修改成如下，然后保存。</p>
-<p>注意<code>:</code>后面有一个空格不能少，否则会出错；记得<code>用户名</code>换成自己的。</p>
+<p>这里推荐使用<a href="//notepad-plus-plus.org/repository/7.x/7.1/npp.7.1.Installer.exe">NotePad++</a>进行编辑找到最后的deploy处，修改成如下，然后保存。<br>​<br>注意<code>:</code>后面有一个空格不能少，否则会出错；记得<code>用户名</code>换成自己的。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line">deploy:</div><div class="line">    <span class="built_in">type</span>: git</div><div class="line">    repo: https://git.coding.net/用户名/用户名.git</div><div class="line">    branch: coding-pages</div></pre></td></tr></table></figure>
 <p><img src="//ww3.sinaimg.cn/large/a05bd5c8gw1f93dhlo62ng20i20doqc0.gif" alt="_config.yml"></p>
 <ul>
