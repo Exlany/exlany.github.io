@@ -130,13 +130,13 @@
   </entry>
   
   <entry>
-    <title>优化Yelee主题的本地站内搜索功能</title>
+    <title>优化本地站内搜索功能</title>
     <link href="https://lany.me/null/hexo-search/"/>
     <id>https://lany.me/null/hexo-search/</id>
     <published>2016-10-22T01:12:28.000Z</published>
-    <updated>2016-11-07T06:46:33.688Z</updated>
+    <updated>2016-11-12T14:56:50.199Z</updated>
     
-    <content type="html"><![CDATA[<p>Yelee主题自带有搜索功能，需安装<code>hexo-generator-search</code>插件生成XML格式的索引文件，本地站内搜索都是基于索引文件的。</p>
+    <content type="html"><![CDATA[<p>主题使用的本地搜索功能，需安装<code>hexo-generator-search</code>插件生成XML格式的索引文件，本地站内搜索都是基于索引文件的。</p>
 <p>但是默认生成<code>search.xml</code>索引文件比较大，这里我们说下优化<code>search.xml</code>索引文件大小，加快搜索速度。</p>
 <a id="more"></a>
 <h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>本地站内搜索都是基于索引文件的，Hexo中可通过<code>hexo-generator-search</code>插件生成XML格式的索引文件。</p>
@@ -159,15 +159,13 @@
     
     <summary type="html">
     
-      &lt;p&gt;Yelee主题自带有搜索功能，需安装&lt;code&gt;hexo-generator-search&lt;/code&gt;插件生成XML格式的索引文件，本地站内搜索都是基于索引文件的。&lt;/p&gt;
+      &lt;p&gt;主题使用的本地搜索功能，需安装&lt;code&gt;hexo-generator-search&lt;/code&gt;插件生成XML格式的索引文件，本地站内搜索都是基于索引文件的。&lt;/p&gt;
 &lt;p&gt;但是默认生成&lt;code&gt;search.xml&lt;/code&gt;索引文件比较大，这里我们说下优化&lt;code&gt;search.xml&lt;/code&gt;索引文件大小，加快搜索速度。&lt;/p&gt;
     
     </summary>
     
     
       <category term="Hexo" scheme="https://lany.me/tags/Hexo/"/>
-    
-      <category term="Yelee" scheme="https://lany.me/tags/Yelee/"/>
     
   </entry>
   

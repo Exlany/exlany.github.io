@@ -22,9 +22,9 @@
     </entry>
     
     <entry>
-      <title><![CDATA[优化Yelee主题的本地站内搜索功能]]></title>
+      <title><![CDATA[优化本地站内搜索功能]]></title>
       <url>https://lany.me/null/hexo-search/</url>
-      <content type="html"><![CDATA[Yelee主题自带有搜索功能，需安装hexo-generator-search插件生成XML格式的索引文件，本地站内搜索都是基于索引文件的。 但是默认生成search.xml索引文件比较大，这里我们说下优化search.xml索引文件大小，加快搜索速度。 安装插件本地站内搜索都是基于索引文件的，Hexo中可通过hexo-generator-search插件生成XML格式的索引文件。 然后在Hexo站点根目录下的_config.yml中添加如下配置即可： 修改插件 改造index.js 默认生成的search.xml文件很大，原生插件生成的内容太多了，还会包含代码行数、html标签，包含很多冗余信息，所以有必要阉割+改造，参考网上部分文章，采用以下代码对其进行精简。 首先修改node_modules/hexo-generator-search/index.js文件，在其中添加3个函数，修改如下： 阉割模板search.ejs 然后修改模板文件search.ejs，主要目的是调用上面添加的3个函数对实际内容进行精简，这里只保留链接、标题、内容。精简成下面这个样子就好了。 精简后，生成的search.xml文件体积可缩小为原来的1/3，能有效加快搜索速度。]]></content>
+      <content type="html"><![CDATA[主题使用的本地搜索功能，需安装hexo-generator-search插件生成XML格式的索引文件，本地站内搜索都是基于索引文件的。 但是默认生成search.xml索引文件比较大，这里我们说下优化search.xml索引文件大小，加快搜索速度。 安装插件本地站内搜索都是基于索引文件的，Hexo中可通过hexo-generator-search插件生成XML格式的索引文件。 然后在Hexo站点根目录下的_config.yml中添加如下配置即可： 修改插件 改造index.js 默认生成的search.xml文件很大，原生插件生成的内容太多了，还会包含代码行数、html标签，包含很多冗余信息，所以有必要阉割+改造，参考网上部分文章，采用以下代码对其进行精简。 首先修改node_modules/hexo-generator-search/index.js文件，在其中添加3个函数，修改如下： 阉割模板search.ejs 然后修改模板文件search.ejs，主要目的是调用上面添加的3个函数对实际内容进行精简，这里只保留链接、标题、内容。精简成下面这个样子就好了。 精简后，生成的search.xml文件体积可缩小为原来的1/3，能有效加快搜索速度。]]></content>
     </entry>
     
     <entry>
