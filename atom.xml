@@ -352,29 +352,4 @@
     
   </entry>
   
-  <entry>
-    <title>hello world</title>
-    <link href="https://lany.me/null/hello-world/"/>
-    <id>https://lany.me/null/hello-world/</id>
-    <published>2016-10-17T15:17:06.000Z</published>
-    <updated>2016-11-04T01:45:03.591Z</updated>
-    
-    <content type="html"><![CDATA[<p>折腾几个小时，终于搞定这个blog。<br>国内搭建在coding上面，国外搭建在github上面。速度应该都不错。。。</p>
-<p>按照惯例，大声的喊。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">printf</span>(<span class="string">"hello world"</span>);</div><div class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello World!"</span>&lt;&lt;<span class="built_in">endl</span>;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;折腾几个小时，终于搞定这个blog。&lt;br&gt;国内搭建在coding上面，国外搭建在github上面。速度应该都不错。。。&lt;/p&gt;
-&lt;p&gt;按照惯例，大声的喊。&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="https://lany.me/tags/essay/"/>
-    
-  </entry>
-  
 </feed>
