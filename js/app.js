@@ -1,1 +1,212 @@
-!function(){"use strict";function t(t,e){var n=[];return t.forEach(function(t){var o=!1,l=[];t.content=t.content.replace(/<[^>]*>/g,""),e.forEach(function(e){var n=new RegExp(e,"i"),i=t.title.search(n),c=t.content.search(n);(i>-1||c>-1)&&(o=!0,l.push(e))}),o&&(t.matchKeyWords=l,n.push(t))}),n}function e(t){var e="";return t.forEach(function(t){var l;l=o(t.content,t.matchKeyWords),l=n(l,t.matchKeyWords),t.title=o(t.title,t.matchKeyWords),t='<li class="item"><a href="'+t.url+'"" target="_blank"><h3 class="title">'+t.title+'</h3></a><p class="post-content">'+l+"</h3></li>",e+=t}),e}function n(t,e){var n=!1,o=0;return e.forEach(function(e){var l=new RegExp(e,"i");o=t.search(l),o<0||(n=!0)}),t=n?o<120?t.substr(0,140):t.substr(o-60,200):t.substr(0,120)}function o(t,e){return t=t.replace(/<[^>]*>/g,""),e.forEach(function(e){var n=new RegExp("("+e+")","ig");t=t.replace(n,'<span class="color-hightlight">$1</span>')}),t}function l(){Util.addClass(u,"hide-dialog"),Util.removeClass(u,"show-dialog"),Util.addClass(r,"hide"),Util.removeClass(r,"show")}var i=(document.documentElement,document.body),c=document.getElementById("toc"),s=document.getElementById("backTop"),a=document.getElementById("toolbox-mobile"),r=document.getElementById("cover"),d=document.getElementById("close"),u=document.getElementById("modal-dialog"),m=0;if(function(){if(s&&(i.scrollTop>10?Util.addClass(s,"show"):Util.removeClass(s,"show")),c){var t=parseInt(window.getComputedStyle(c).height,10),e=document.documentElement.clientHeight;if(t+20>e)return;i.scrollTop>180?Util.addClass(c,"fixed"):Util.removeClass(c,"fixed")}}(),document.addEventListener("DOMContentLoaded",function(){FastClick.attach(document.body)},!1),window.noZensmooth=!0,scrollSpy.init({nodeList:document.querySelectorAll(".toc-link"),scrollTarget:window}),Util.bind(window,"scroll",function(){if(m=i.scrollTop,c){var t=parseInt(window.getComputedStyle(c).height,10),e=document.documentElement.clientHeight;if(t+20>e)return;m>180?Util.addClass(c,"fixed"):Util.removeClass(c,"fixed")}s&&(m>10?Util.addClass(s,"show"):Util.removeClass(s,"show"))}),s&&Util.bind(s,"click",function(){zenscroll.to(i)}),c){var c=document.getElementById("toc"),h=document.querySelectorAll(".toc-link"),f=Array.prototype.slice.call(h);f.forEach(function(t){Util.bind(t,"click",function(t){var e=document.getElementById(this.hash.substring(1));zenscroll.to(e),t.preventDefault()})})}a&&(Util.bind(a,"click",function(){Util.addClass(u,"show-dialog"),Util.removeClass(u,"hide-dialog"),Util.addClass(r,"show"),Util.removeClass(r,"hide")}),Util.bind(r,"click",l),Util.bind(d,"click",l)),"/search/"===location.pathname&&Util.request("GET","/search.json",function(n){var o=document.getElementById("input-search");Util.bind(o,"keyup",function(){var o=this.value.trim().toLowerCase().split(/[\s\-]+/);if(!(this.value.trim().length<=0)){var l=t(n,o),i=document.getElementById("list-search");i.innerHTML=e(l)}})})}();
+
+(function() {
+  'use strict';
+
+  var $html = document.documentElement;
+  var $body = document.body;
+  var $toc = document.getElementById('toc');
+  var $backTop = document.getElementById('backTop');
+  var $toolboxMobile = document.getElementById('toolbox-mobile');
+  var $cover = document.getElementById('cover');
+  var $close = document.getElementById('close');
+  var $modalDialog = document.getElementById('modal-dialog');
+  var scrollTop = 0;
+  var tocTop = 20;
+
+  (function init() {
+    if ($backTop) {
+      $body.scrollTop > 10 ? Util.addClass($backTop, 'show') : Util.removeClass($backTop, 'show');
+    }
+
+    if ($toc) {
+      var tocHeight = parseInt(window.getComputedStyle($toc)['height'], 10);
+      var winHeight = document.documentElement.clientHeight;
+      if (tocHeight + 20 > winHeight) {
+          return;
+      }
+      $body.scrollTop > 180 ? Util.addClass($toc, 'fixed') : Util.removeClass($toc, 'fixed');
+    }
+
+  }());
+
+  document.addEventListener('DOMContentLoaded', function() {
+    FastClick.attach(document.body);
+  }, false);
+
+  window.noZensmooth = true;
+
+  // scroll spy
+  scrollSpy.init({
+    nodeList: document.querySelectorAll('.toc-link'),
+    scrollTarget: window
+  });
+
+  // toc and backTop
+  Util.bind(window, 'scroll', function() {
+    scrollTop = $body.scrollTop;
+    if ($toc) {
+      var tocHeight = parseInt(window.getComputedStyle($toc)['height'], 10);
+      var winHeight = document.documentElement.clientHeight;
+      if (tocHeight + 20 > winHeight) {
+          return;
+      }
+      
+      scrollTop > 180 ? Util.addClass($toc, 'fixed') : Util.removeClass($toc, 'fixed');
+    }
+
+    if ($backTop) {
+      scrollTop > 10 ? Util.addClass($backTop, 'show') : Util.removeClass($backTop, 'show');
+    }
+  });
+
+  if ($backTop) {
+    Util.bind($backTop, 'click', function() {
+      zenscroll.to($body)
+    });
+  }
+
+  if ($toc) {
+    var $toc = document.getElementById('toc');
+    var $tocLinks = document.querySelectorAll('.toc-link');
+    var links = Array.prototype.slice.call($tocLinks);
+
+    links.forEach(function(element) {
+      Util.bind(element, 'click', function(e) {
+        var $target = document.getElementById(this.hash.substring(1));
+        zenscroll.to($target)
+        e.preventDefault();
+      });
+    });
+  }
+
+  if ($toolboxMobile) {
+    Util.bind($toolboxMobile, 'click', function() {
+      Util.addClass($modalDialog, 'show-dialog')
+      Util.removeClass($modalDialog, 'hide-dialog');
+
+      Util.addClass($cover, 'show')
+      Util.removeClass($cover, 'hide');
+    });
+
+
+    Util.bind($cover, 'click', closeModal);
+    Util.bind($close, 'click', closeModal);
+  }
+
+
+  if (location.pathname === '/search/') {
+    Util.request('GET', '/search.json', function(data) {
+      var $inputSearch = document.getElementById('input-search');
+      Util.bind($inputSearch, 'keyup', function() {
+        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+
+        if (this.value.trim().length <= 0) {
+          return;
+        }
+
+        var results = filterPosts(data, keywords);
+        var $listSearch = document.getElementById('list-search');
+        $listSearch.innerHTML = createInnerHTML(results);
+      });
+
+    });
+  }
+
+
+  ///////////////////
+
+  function filterPosts(data, keywords) {
+    var results = [];
+
+    data.forEach(function(item) {
+      var isMatch = false;
+      var matchKeyWords = [];
+      item.content = item.content.replace(/<[^>]*>/g, '');
+
+      keywords.forEach(function(word) {
+        var reg = new RegExp(word, 'i');
+        var indexTitle = item.title.search(reg);
+        var indexContent = item.content.search(reg);
+
+        if (indexTitle > -1 || indexContent > -1) {
+          isMatch = true;
+          matchKeyWords.push(word);
+        }
+      });
+
+      if (isMatch) {
+        item.matchKeyWords = matchKeyWords;
+        results.push(item);
+      }
+    });
+
+    return results;
+  }
+
+  function createInnerHTML(results) {
+    var content = '';
+    results.forEach(function(item) {
+      var postContent;
+      postContent = highlightText(item.content, item.matchKeyWords);
+      postContent = getPreviewContent(postContent, item.matchKeyWords);
+
+      item.title = highlightText(item.title, item.matchKeyWords);
+
+      item = '<li class="item">' +
+        '<a href="' + item.url + '"" target="_blank">' +
+        '<h3 class="title">' + item.title + '</h3>' +
+        '</a>' +
+        '<p class="post-content">' + postContent + '</h3>' +
+        '</li>';
+      content += item;
+    });
+
+    return content;
+  }
+
+  function getPreviewContent(content, matchKeyWords) {
+    var isMatch = false;
+    var index = 0;
+    matchKeyWords.forEach(function(word) {
+      var reg = new RegExp(word, 'i');
+      index = content.search(reg);
+      if (index < 0) {
+        return;
+      }
+
+      isMatch = true;
+    });
+
+    if (isMatch) {
+      if (index < 120) {
+        content = content.substr(0, 140);
+      } else {
+        content = content.substr(index - 60, 200);
+      }
+    } else {
+      content = content.substr(0, 120);
+    }
+
+    return content;
+  }
+
+  function highlightText(text, matchKeyWords) {
+    text = text.replace(/<[^>]*>/g, '');
+    matchKeyWords.forEach(function(word) {
+      var reg = new RegExp('(' + word + ')', 'ig');
+      text = text.replace(reg, '<span class="color-hightlight">$1</span>');
+    });
+
+    return text;
+  }
+
+
+  function closeModal() {
+    Util.addClass($modalDialog, 'hide-dialog')
+    Util.removeClass($modalDialog, 'show-dialog');
+    Util.addClass($cover, 'hide')
+    Util.removeClass($cover, 'show');
+  }
+
+
+}());
