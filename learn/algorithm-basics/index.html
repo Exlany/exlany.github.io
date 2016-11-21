@@ -1,1 +1,333 @@
-<!DOCTYPE html><html class="light page-post"><head><meta charset="utf-8"><script type="text/javascript">var targetProtocol="https:";window.location.protocol!=targetProtocol&&(window.location.href=targetProtocol+window.location.href.substring(window.location.protocol.length))</script><!--[if lt IE 9]><style>body {display: none; background: none !important} </style><meta http-equiv="Refresh" Content="0; url=http://outdatedbrowser.com/zh-cn"/><![endif]--><title>算法排序学习 | Lany</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="keywords" content="算法,"><meta name="description" content="从今天开始逐步开始学习算法部分的内容。"><meta property="og:type" content="article"><meta property="og:title" content="算法排序学习"><meta property="og:url" content="https://lany.me/learn/algorithm-basics/index.html"><meta property="og:site_name" content="Lany"><meta property="og:description" content="从今天开始逐步开始学习算法部分的内容。"><meta property="og:image" content="https://ws3.sinaimg.cn/large/a05bd5c8jw1f9fafxtizmj20tj07p404.jpg"><meta property="og:updated_time" content="2016-11-20T07:34:30.853Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="算法排序学习"><meta name="twitter:description" content="从今天开始逐步开始学习算法部分的内容。"><meta name="twitter:image" content="https://ws3.sinaimg.cn/large/a05bd5c8jw1f9fafxtizmj20tj07p404.jpg"><link rel="icon" href="/images/favicon.png"><link href="/css/styles.css?v=d671a41f" rel="stylesheet"><link rel="stylesheet" href="/css/personal-style.css"></head><body> <span id="toolbox-mobile" class="toolbox-mobile">盒子</span><div class="post-header CENTER"><div class="toolbox"> <a class="toolbox-entry" href="/"><span class="toolbox-entry-text">盒子</span><i class="icon-angle-down"></i><i class="icon-home"></i></a><ul class="list-toolbox"><li class="item-toolbox"> <a class="CIRCLE" href="/archives/" rel="noopener noreferrer" target="_self">博客</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/category/" rel="noopener noreferrer" target="_self">分类</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/tags/" rel="noopener noreferrer" target="_self">标签</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/link/" rel="noopener noreferrer" target="_self">友链</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/about/" rel="noopener noreferrer" target="_self">关于</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/atom.xml" rel="noopener noreferrer" target="_blank">RSS</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/search/" rel="noopener noreferrer" target="_self">搜索</a></li></ul></div></div><div id="toc" class="toc-article"> <strong class="toc-title">文章目录</strong><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#算法基础"><span class="toc-text">算法基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#插入排序"><span class="toc-text">插入排序</span></a></li></ol></li></ol></div><div class="content content-post CENTER"><article id="post-algorithm-basics" class="article article-type-post" itemprop="blogPost"><header class="article-header"><h1 class="post-title">算法排序学习</h1><div class="article-meta"><span><i class="icon-calendar"></i> <span>2016.11.03</span></span><span class="article-author"><i class="icon-user"></i> <span>Lany</span></span><span class="article-category"><i class="icon-list"></i> <a class="article-category-link" href="/category/learn/">学习</a></span> <span><i class="fa fa-eye">&nbsp&nbsp&nbsp</i><span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span></span><span><i class="icon-comment"></i><span class="ds-thread-count" data-thread-key="post-algorithm-basics"><i class="fa fa-spinner fa-spin"></i></span></span></div></header><div class="article-content"><p>从今天开始逐步开始学习算法部分的内容。</p><a id="more"></a><h2 id="算法基础"><a href="#算法基础" class="headerlink" title="算法基础"></a>算法基础</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><blockquote><p><strong>时间复杂度</strong>：$O(n^2)$</p><ul><li>插入排序的工作方式像排序一手扑克牌，开始时，我们的左手为空并且桌子上的牌面向下。然后，我们每次从桌子上拿走一张牌并将它插入左手中正确的位置。为了找到一张牌的正确位置，我们从右到左将它与已在手中的每张牌进行比较，然后找到合适的位置将其插入。然后重复抓牌，插入。</li><li>理解原理之后，我们开始着手实现。先定义一个的数组 int arr[128] = { 5,1,8,7,4,2,3,9,6 }; 可以理解为洗好的牌。</li><li>第二部开始抓第一张牌，然后再抓第二张拍，做比较，然后根据比较结果插入。这里我们采用一个 while 判断循环来实现 <code>对比 → 插入</code> 的过程。并且有多少张牌我们就要重复抓取几次，因此我们写一个 for 循环来进行抓牌。</li></ul></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> mun = <span class="number">6</span>;                        <span class="comment">//假如现在有 6 张牌</span></div><div class="line"><span class="keyword">int</span> a[<span class="number">6</span>] = &#123; <span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">3</span> &#125;;         <span class="comment">//然后我们将 6 张牌洗乱</span></div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertionSort</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; mun; i++)   <span class="comment">//第一张牌不需要比较，对比是第二张牌开始的，所以 i = 1 。</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> key = a[i];             <span class="comment">//将牌抓到右手，避免插入的时候 arr[i] 被覆盖掉导致对比出错</span></div><div class="line">        <span class="keyword">int</span> j = i - <span class="number">1</span>;              <span class="comment">//左手的牌是从第一张开始的，因此 j = i - 1 ，第一次循环时为 0 ，第二次为1，······</span></div><div class="line">        <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; a[j] &gt; key)<span class="comment">//这里开始进行从右到左的对比，直到最左边没牌为止。</span></div><div class="line">        &#123;</div><div class="line">            a[j + <span class="number">1</span>] = a[j];        <span class="comment">//若左手中右边的牌比左边的小，那么将左边的向右移一位</span></div><div class="line">            j--;                    <span class="comment">//然后继续向左，</span></div><div class="line">        &#125;                           <span class="comment">//跳到 `while` 继续对比，直到左边比右边小结束循环。</span></div><div class="line">        arr[j + <span class="number">1</span>] = key;           <span class="comment">//对比完之后，将右手的牌插入进去，由于上面 `j--` 了一次，然后跳出了循环，因此这里需要`j+1`加一次,保证牌不会插左边去了。</span></div><div class="line">    &#125;                               <span class="comment">//第二张牌插完后，继续抓第三张对比插入，再第四张·····直到全部抓完。</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><blockquote><p>下面用一个插图形象表示下</p></blockquote><p><img src="https://ws3.sinaimg.cn/large/a05bd5c8jw1f9fafxtizmj20tj07p404.jpg" alt="算法工作流程"></p><blockquote><p>练习：</p><ul><li>[x] 根据上图为模型重写 <code>void InsertionSort()</code> 使之变降序排列</li></ul></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> mun = <span class="number">6</span>;</div><div class="line"><span class="keyword">int</span> a[<span class="number">6</span>] = &#123; <span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">3</span> &#125;;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertionSort</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; mun; i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> key = a[i];</div><div class="line">        <span class="keyword">int</span> j = i - <span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; a[j] &lt; key) <span class="comment">//将 &gt; 改成 &lt; ，变为降序排列</span></div><div class="line">        &#123;</div><div class="line">            a[j + <span class="number">1</span>] = a[j];</div><div class="line">            j--;</div><div class="line">        &#125;</div><div class="line">        a[j + <span class="number">1</span>] = key;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></div></article></div><div class="text-center donation"><div class="inner-donation"> <span class="btn-donation">支持一下</span><div class="donation-body"><div class="tip text-center">扫一扫，支持 Lany</div><ul class="theme.donation.items.length"><li class="item"> <img src="/images/qr-wechat.png" alt=""></li><li class="item"> <img src="/images/qr-alipay.png" alt=""></li></ul></div></div></div><a id="backTop" class="back-top"><i class="icon-angle-up"></i></a><div class="modal" id="modal"><span id="cover" class="cover hide"></span><div id="modal-dialog" class="modal-dialog hide-dialog"><div class="modal-header"> <span id="close" class="btn-close">关闭</span></div><hr><div class="modal-body"><ul class="list-toolbox"><li class="item-toolbox"> <a class="CIRCLE" href="/archives/" rel="noopener noreferrer" target="_self">博客</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/category/" rel="noopener noreferrer" target="_self">分类</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/tags/" rel="noopener noreferrer" target="_self">标签</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/link/" rel="noopener noreferrer" target="_self">友链</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/about/" rel="noopener noreferrer" target="_self">关于</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/atom.xml" rel="noopener noreferrer" target="_blank">RSS</a></li><li class="item-toolbox"> <a class="CIRCLE" href="/search/" rel="noopener noreferrer" target="_self">搜索</a></li></ul></div></div></div><div class="fexo-comments comments-post"><section class="duoshuo-comments"><div class="ds-thread" data-thread-key="post-algorithm-basics" data-title="算法排序学习" data-url="https://lany.me/learn/algorithm-basics/index.html"></div></section><script type="text/javascript">var duoshuoQuery={short_name:"Lany"};!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https:":"http:")+"//dn-bim.qbox.me/js/duoshuo.min.js",t.charset="UTF-8",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(t)}()</script><link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"></div><script type="text/javascript">function loadScript(e,t){var a=document.createElement("script");a.type="text/javascript",a.readyState?a.onreadystatechange=function(){"loaded"!=a.readyState&&"complete"!=a.readyState||(a.onreadystatechange=null,t())}:a.onload=function(){t()},a.src=e,document.getElementsByTagName("head")[0].appendChild(a)}window.onload=function(){loadScript("/js/bundle.js?235683",function(){})}</script><script type="text/javascript">var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="//hm.baidu.com/hm.js?6cd068bf38b6a56a205305e14a786360";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$','$'],["\\(","\\)"]],processEscapes:true,skipTags:['script','noscript','style','textarea','pre','code']}});MathJax.Hub.Queue(function(){var all=MathJax.Hub.getAllJax(),i;for(i=0;i<all.length;i+=1){all[i].SourceElement().parentNode.className+=' has-jax'}});</script><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <script type="text/javascript">var targetProtocol="https:";window.location.protocol!=targetProtocol&&(window.location.href=targetProtocol+window.location.href.substring(window.location.protocol.length))</script>
+  
+  
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=http://outdatedbrowser.com/zh-cn" />
+    <![endif]-->
+
+  
+  <title>算法排序学习 | Lany</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+  
+    <meta name="keywords" content="算法,">
+  
+
+  <meta name="description" content="从今天开始逐步开始学习算法部分的内容。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法排序学习">
+<meta property="og:url" content="https://lany.me/learn/algorithm-basics/index.html">
+<meta property="og:site_name" content="Lany">
+<meta property="og:description" content="从今天开始逐步开始学习算法部分的内容。">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/a05bd5c8jw1f9fafxtizmj20tj07p404.jpg">
+<meta property="og:updated_time" content="2016-11-20T07:34:30.853Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法排序学习">
+<meta name="twitter:description" content="从今天开始逐步开始学习算法部分的内容。">
+<meta name="twitter:image" content="https://ws3.sinaimg.cn/large/a05bd5c8jw1f9fafxtizmj20tj07p404.jpg">
+
+  
+
+  
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <link href="/css/styles.css?v=d671a41f" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/archives/" rel="noopener noreferrer" target="_self">
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/category/" rel="noopener noreferrer" target="_self">
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/tags/" rel="noopener noreferrer" target="_self">
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/link/" rel="noopener noreferrer" target="_self">
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/about/" rel="noopener noreferrer" target="_self">
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/atom.xml" rel="noopener noreferrer" target="_blank">
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/search/" rel="noopener noreferrer" target="_self">
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#算法基础"><span class="toc-text">算法基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#插入排序"><span class="toc-text">插入排序</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-algorithm-basics" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">算法排序学习</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.11.03</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Lany</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/category/learn/">学习</a>
+  </span>
+
+
+
+      
+      
+      
+        <span>
+          <i class="fa fa-eye">&nbsp&nbsp&nbsp</i><span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+        </span>
+      
+
+      
+        <span>
+          <i class="icon-comment"></i> 
+          <span class="ds-thread-count" data-thread-key="post-algorithm-basics"><i class="fa fa-spinner fa-spin"></i></span>
+        </span>
+      
+  
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>从今天开始逐步开始学习算法部分的内容。</p>
+<a id="more"></a>
+<h2 id="算法基础"><a href="#算法基础" class="headerlink" title="算法基础"></a>算法基础</h2><h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><blockquote>
+<p><strong>时间复杂度</strong>：$O(n^2)$</p>
+<ul>
+<li>插入排序的工作方式像排序一手扑克牌，开始时，我们的左手为空并且桌子上的牌面向下。然后，我们每次从桌子上拿走一张牌并将它插入左手中正确的位置。为了找到一张牌的正确位置，我们从右到左将它与已在手中的每张牌进行比较，然后找到合适的位置将其插入。然后重复抓牌，插入。</li>
+<li>理解原理之后，我们开始着手实现。先定义一个的数组 int arr[128] = { 5,1,8,7,4,2,3,9,6 }; 可以理解为洗好的牌。</li>
+<li>第二部开始抓第一张牌，然后再抓第二张拍，做比较，然后根据比较结果插入。这里我们采用一个 while 判断循环来实现 <code>对比 → 插入</code> 的过程。并且有多少张牌我们就要重复抓取几次，因此我们写一个 for 循环来进行抓牌。</li>
+</ul>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> mun = <span class="number">6</span>;                        <span class="comment">//假如现在有 6 张牌</span></div><div class="line"><span class="keyword">int</span> a[<span class="number">6</span>] = &#123; <span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">3</span> &#125;;         <span class="comment">//然后我们将 6 张牌洗乱</span></div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertionSort</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; mun; i++)   <span class="comment">//第一张牌不需要比较，对比是第二张牌开始的，所以 i = 1 。</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> key = a[i];             <span class="comment">//将牌抓到右手，避免插入的时候 arr[i] 被覆盖掉导致对比出错</span></div><div class="line">        <span class="keyword">int</span> j = i - <span class="number">1</span>;              <span class="comment">//左手的牌是从第一张开始的，因此 j = i - 1 ，第一次循环时为 0 ，第二次为1，······</span></div><div class="line">        <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; a[j] &gt; key)<span class="comment">//这里开始进行从右到左的对比，直到最左边没牌为止。</span></div><div class="line">        &#123;</div><div class="line">            a[j + <span class="number">1</span>] = a[j];        <span class="comment">//若左手中右边的牌比左边的小，那么将左边的向右移一位</span></div><div class="line">            j--;                    <span class="comment">//然后继续向左，</span></div><div class="line">        &#125;                           <span class="comment">//跳到 `while` 继续对比，直到左边比右边小结束循环。</span></div><div class="line">        arr[j + <span class="number">1</span>] = key;           <span class="comment">//对比完之后，将右手的牌插入进去，由于上面 `j--` 了一次，然后跳出了循环，因此这里需要`j+1`加一次,保证牌不会插左边去了。</span></div><div class="line">    &#125;                               <span class="comment">//第二张牌插完后，继续抓第三张对比插入，再第四张·····直到全部抓完。</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>下面用一个插图形象表示下</p>
+</blockquote>
+<p><img src="https://ws3.sinaimg.cn/large/a05bd5c8jw1f9fafxtizmj20tj07p404.jpg" alt="算法工作流程"></p>
+<blockquote>
+<p>练习：</p>
+<ul>
+<li>[x] 根据上图为模型重写 <code>void InsertionSort()</code> 使之变降序排列</li>
+</ul>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> mun = <span class="number">6</span>;</div><div class="line"><span class="keyword">int</span> a[<span class="number">6</span>] = &#123; <span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">3</span> &#125;;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertionSort</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; mun; i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> key = a[i];</div><div class="line">        <span class="keyword">int</span> j = i - <span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; a[j] &lt; key) <span class="comment">//将 &gt; 改成 &lt; ，变为降序排列</span></div><div class="line">        &#123;</div><div class="line">            a[j + <span class="number">1</span>] = a[j];</div><div class="line">            j--;</div><div class="line">        &#125;</div><div class="line">        a[j + <span class="number">1</span>] = key;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+    
+  </div>
+</article>
+
+</div>
+
+
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Lany</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/archives/" rel="noopener noreferrer" target="_self">
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/category/" rel="noopener noreferrer" target="_self">
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/tags/" rel="noopener noreferrer" target="_self">
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/link/" rel="noopener noreferrer" target="_self">
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/about/" rel="noopener noreferrer" target="_self">
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/atom.xml" rel="noopener noreferrer" target="_blank">
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/search/" rel="noopener noreferrer" target="_self">
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    
+    <div class="ds-thread" data-thread-key="post-algorithm-basics" data-title="算法排序学习" data-url="https://lany.me/learn/algorithm-basics/index.html"></div>
+    
+  </section>
+
+
+
+
+  <script type="text/javascript">var duoshuoQuery={short_name:"Lany"};!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https:":"http:")+"//dn-bim.qbox.me/js/duoshuo.min.js",t.charset="UTF-8",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(t)}()</script>
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">function loadScript(e,t){var a=document.createElement("script");a.type="text/javascript",a.readyState?a.onreadystatechange=function(){"loaded"!=a.readyState&&"complete"!=a.readyState||(a.onreadystatechange=null,t())}:a.onload=function(){t()},a.src=e,document.getElementsByTagName("head")[0].appendChild(a)}window.onload=function(){loadScript("/js/bundle.js?235683",function(){})}</script>
+
+
+
+  <script type="text/javascript">var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="//hm.baidu.com/hm.js?6cd068bf38b6a56a205305e14a786360";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$','$'],["\\(","\\)"]],processEscapes:true,skipTags:['script','noscript','style','textarea','pre','code']}});MathJax.Hub.Queue(function(){var all=MathJax.Hub.getAllJax(),i;for(i=0;i<all.length;i+=1){all[i].SourceElement().parentNode.className+=' has-jax'}});</script><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+</html>
