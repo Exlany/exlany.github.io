@@ -196,7 +196,7 @@
     <link href="https://lany.me/front/hexo-top/"/>
     <id>https://lany.me/front/hexo-top/</id>
     <published>2016-10-21T23:57:16.000Z</published>
-    <updated>2016-11-20T07:55:20.826Z</updated>
+    <updated>2016-11-22T06:16:12.159Z</updated>
     
     <content type="html"><![CDATA[<p>考虑到之前的博客有置顶文章，所以需要置顶功能。</p>
 <a id="more"></a>
@@ -205,9 +205,7 @@
 <p>修改<code>generator.js</code>完成后只需要在 front-matter 中设置需要置顶文章的<code>top</code>值，将会根据 top 值大小来选择置顶顺序。（大的在前面）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">title: </div><div class="line">date: </div><div class="line">tags:</div><div class="line">top: 0 		<span class="comment">#0为假不排序  N ~ 1 由高到低依次排序  </span></div><div class="line">---</div></pre></td></tr></table></figure>
 <blockquote>
-<ul>
-<li>原文地址：<code>http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/</code></li>
-</ul>
+<p>原文地址：<code>http://www.netcan666.com/2015/11/22/解决Hexo置顶问题/</code></p>
 </blockquote>
 ]]></content>
     
