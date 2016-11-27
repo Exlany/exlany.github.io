@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lany.me/front/hexo-duoshuo/</loc>
+    
+    <lastmod>2016-11-27T01:22:54.161Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lany.me/front/hexo-top/</loc>
     
     <lastmod>2016-11-22T06:16:12.159Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://lany.me/learn/hexo-coding/</loc>
     
     <lastmod>2016-11-20T07:53:48.666Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lany.me/front/hexo-duoshuo/</loc>
-    
-    <lastmod>2016-11-20T07:50:49.941Z</lastmod>
     
   </url>
   
