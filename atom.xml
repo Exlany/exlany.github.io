@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lany.me/"/>
-  <updated>2017-04-11T14:04:34.138Z</updated>
+  <updated>2017-04-11T14:09:29.067Z</updated>
   <id>https://lany.me/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>一个通过解除互斥体实现程序多开的小工具</title>
-    <link href="https://lany.me/Tool/tool-dk/"/>
-    <id>https://lany.me/Tool/tool-dk/</id>
+    <link href="https://lany.me/tool/tool-dk/"/>
+    <id>https://lany.me/tool/tool-dk/</id>
     <published>2017-04-11T13:26:12.000Z</published>
-    <updated>2017-04-11T14:04:34.138Z</updated>
+    <updated>2017-04-11T14:09:29.067Z</updated>
     
     <content type="html"><![CDATA[<p>今天群里面一个朋友问，微信PC版怎么多开，然后顺手写了个通过解除互斥体来实现多开的工具。想着反正都写了就丢出来吧。</p>
 <p>说明：凡是通过互斥体禁止多开的程序都可以使用；若使用无效则程序可能不是通过互斥体来防止多开的，因此本工具也无效。</p>
@@ -39,7 +39,7 @@
     
     </summary>
     
-      <category term="Tool" scheme="https://lany.me/category/Tool/"/>
+      <category term="工具" scheme="https://lany.me/category/tool/"/>
     
     
       <category term="Tool" scheme="https://lany.me/tags/Tool/"/>
